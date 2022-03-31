@@ -36,4 +36,5 @@ resource "aws_alb_target_group" "frontend_lb" {
     type            = "lb_cookie"
     cookie_duration = var.sticky_ttl
   }
+  depends_on = [aws_lb.frontend_lb]
 }
